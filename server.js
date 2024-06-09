@@ -24,8 +24,8 @@ const randomNumber = (start, stop) => {
 
 const fortune = (ctx, body = null, status = 200) => {
     // Uncomment for delay
-    // const delay = randomNumber(1, 10) * 1000;
-    const delay = 0;
+    const delay = randomNumber(1, 3) * 1000;
+    //const delay = 0;
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             // Uncomment for error generation
@@ -115,6 +115,6 @@ router.post('/api/order', async (ctx, next) => {
 app.use(router.routes())
 app.use(router.allowedMethods());
 
-const port = process.env.PORT || 7040;
+const port = process.env.PORT || 7030;
 const server = http.createServer(app.callback());
 server.listen(port);
