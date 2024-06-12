@@ -2,11 +2,11 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "prestart": "npm install",
     "start": "forever server.js",
-    "watch": "forever -w server.js"
+    "watch": "nodemon -w server.js"
   },
   "author": "",
   "license": "ISC",
